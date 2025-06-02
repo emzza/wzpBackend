@@ -123,6 +123,6 @@ MIT
 
 ## 📧 Contacto
 
-Tu Nombre - [@tutwitter](https://twitter.com/tutwitter) - email@ejemplo.com
+Tu Nombre - [instagram.com/zazzer___) - zazzerwebs@gmail.com
 
-Link del Proyecto: [https://github.com/tu-usuario/zazzermind-app](https://github.com/tu-usuario/zazzermind-app) 
+Link del Proyecto: ( https://github.com/emzza/wzpBackend/ )
