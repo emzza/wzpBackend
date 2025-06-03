@@ -1,4 +1,4 @@
-# Zazzermind App - Backend
+# WZPBackend - Backend
 
 Backend para la aplicación SaaS de automatización de mensajes motivacionales vía WhatsApp.
 
