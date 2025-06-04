@@ -5,19 +5,26 @@ const path = require('path');
 let client = null;
 
 const initializeWhatsApp = () => {
+  //client es el cliente de whatsapp
   client = new Client({
+    //authStrategy es la estrategia de autenticación
     authStrategy: new LocalAuth({
+      //clientId es el id del cliente
       clientId: 'zazzermind',
+      //dataPath es la ruta de los datos de la sesión
       dataPath: path.join(__dirname, '../sessions')
     }),
+    //puppeteer es el navegador que se utiliza para la autenticación
     puppeteer: {
       args: ['--no-sandbox']
     }
   });
-
+  //on es para escuchar un evento
   client.on('qr', async (qr) => {
-    try {
+    try {   
+      //qrcode es el codigo de verificacion
       const qrDataUrl = await qrcode.toDataURL(qr);
+      //emit es para enviar un evento al cliente
       global.io.emit('qr', qrDataUrl);
     } catch (err) {
       console.error('Error al generar QR:', err);

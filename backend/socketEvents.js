@@ -7,8 +7,9 @@ const setupSocketEvents = (io, whatsappClient) => {
 
     // Emitir estado actual de la sesión
     const status = whatsappClient ? 'connected' : 'disconnected';
+    //socket.emit es para enviar un evento al cliente
     socket.emit('session_status', { status });
-
+    //socket.on es para recibir un evento del cliente
     socket.on('disconnect', () => {
       console.log('Cliente desconectado:', socket.id);
     });
